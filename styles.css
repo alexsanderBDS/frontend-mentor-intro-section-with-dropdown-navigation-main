@@ -82,6 +82,7 @@ body {
 
 .button-nav {
   z-index: 10;
+  background: none;
 }
 
 body::after {
@@ -92,26 +93,44 @@ body::after {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 0;
+  z-index: 1;
 
-  opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  opacity: 0;
+  transition: all 0.5s;
 }
 
 .nav {
   position: absolute;
   height: 100%;
-  width: 80vw;
+  width: 65vw;
   top: 0;
   left: 100%;
-  background-color: bisque;
-  z-index: 1;
+  background-color: var(--clr-naw);
 
-  /* transform: translateX(-100%); */
-  /* opacity: 0;
   visibility: hidden;
-  pointer-events: none; */
+  pointer-events: none;
+  opacity: 0;
+
+  z-index: 2;
+  transition: all 1s;
+
+  display: flex;
+  flex-direction: column;
+  padding: var(--80ws) var(--32ws);
+  gap: var(--32ws);
+}
+
+.mobile-open::after,
+.mobile-open .nav {
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.mobile-open .nav {
+  transform: translateX(-100%);
 }
 
 .nav-list,
@@ -119,6 +138,84 @@ body::after {
   display: flex;
   flex-direction: column;
   list-style: none;
+}
+
+.nav-list {
+  gap: var(--24ws);
+}
+
+.auth-list {
+  gap: var(--16ws);
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-register {
+  position: relative;
+  border: 1px solid var(--clr-nmg);
+  border-radius: var(--12ws);
+  width: 100%;
+  text-align: center;
+  padding: var(--12ws);
+}
+
+.nav-link:link,
+.nav-link:visited,
+.auth-link:link,
+.auth-link:visited {
+  text-decoration: none;
+  color: var(--clr-nmg);
+}
+
+.dropdown-list {
+  position: relative;
+  list-style: none;
+  padding: var(--12ws);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--12ws);
+
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.dropdown-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  display: flex;
+  align-items: center;
+  gap: var(--12ws);
+}
+
+.dropdown-item a:link,
+.dropdown-item a:visited {
+  text-decoration: none;
+  color: var(--clr-nmg);
+}
+
+.drop-open .dropdown-list,
+.drop-open .dropdown-item {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+
+  padding-bottom: 0;
+}
+
+.arrow-up {
+  vertical-align: middle;
+  margin-left: var(--8ws);
 }
 
 .hero-img {

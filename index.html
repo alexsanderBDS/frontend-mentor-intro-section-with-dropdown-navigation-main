@@ -28,11 +28,44 @@
       </button>
       <nav class="nav">
         <ul class="nav-list">
-          <li>
+          <li class="dropdown">
             <a href="#" class="nav-link"> Features </a>
+            <img src="images/icon-arrow-down.svg" alt="icon" class="arrow-up" />
+            <ul class="dropdown-list">
+              <li class="dropdown-item">
+                <img src="images/icon-todo.svg" alt="icon" width="15" /><a
+                  href="#todolist"
+                  >Todo List</a
+                >
+              </li>
+              <li class="dropdown-item">
+                <img src="images/icon-calendar.svg" alt="icon" width="15" /><a
+                  href="#calendar"
+                  >Calendar</a
+                >
+              </li>
+              <li class="dropdown-item">
+                <img src="images/icon-reminders.svg" alt="icon" width="15" /><a
+                  href="#reminders"
+                  >Reminders</a
+                >
+              </li>
+              <li class="dropdown-item">
+                <img src="images/icon-planning.svg" alt="icon" width="15" /><a
+                  href="#planning"
+                  >Planning</a
+                >
+              </li>
+            </ul>
           </li>
-          <li>
+          <li class="dropdown">
             <a href="#" class="nav-link"> Company </a>
+            <img src="images/icon-arrow-down.svg" alt="icon" class="arrow-up" />
+            <ul class="dropdown-list">
+              <li class="dropdown-item"><a href="#history">History</a></li>
+              <li class="dropdown-item"><a href="#ourteam">Our Team</a></li>
+              <li class="dropdown-item"><a href="#blog">Blog</a></li>
+            </ul>
           </li>
           <li>
             <a href="#" class="nav-link"> Careers </a>
@@ -45,7 +78,7 @@
           <li>
             <a class="auth-link" href="#"> Login </a>
           </li>
-          <li>
+          <li class="btn-register">
             <a class="auth-link" href="#"> Register </a>
           </li>
         </ul>
@@ -111,5 +144,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Alexsander</a>.
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
