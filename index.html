@@ -85,13 +85,23 @@
       </nav>
     </header>
     <main>
-      <section class="section-hero">
-        <img
-          src="images/image-hero-mobile.png"
-          alt=""
-          width="200px"
-          class="hero-img"
-        />
+      <section class="section-hero container">
+        <picture class="hero-img">
+          <source
+            media="(min-width: 600px)"
+            srcset="images/image-hero-desktop.png"
+          />
+          <source
+            media="(min-width: 375px)"
+            srcset="images/image-hero-mobile.png"
+          />
+          <img
+            class="hero-img"
+            src="images/image-hero-mobile.png"
+            alt=""
+            width="200px"
+          />
+        </picture>
       </section>
       <section class="section-cta">
         <h1 class="heading">Make remote work</h1>
@@ -142,7 +152,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Alexsander</a>.
+      >. Coded by <a href="https://github.com/alexsanderBDS">Alexsander</a>.
     </footer>
     <script src="script.js"></script>
   </body>
