@@ -13,9 +13,7 @@ btnEl.addEventListener("click", () => {
 });
 
 dropEls.forEach((dropEl) => {
-  const navLinkEl = dropEl.querySelector(".nav-link");
-
-  navLinkEl.addEventListener("click", function () {
+  dropEl.addEventListener("click", function () {
     const arrowEl = dropEl.querySelector(".arrow-up");
     if (!dropEl.classList.contains("drop-open")) {
       arrowEl.setAttribute("src", "/images/icon-arrow-up.svg");
